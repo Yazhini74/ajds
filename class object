@@ -1,0 +1,60 @@
+class common {
+    static String PM = "Narendra Modi";
+}
+
+class TN {
+    static String state = "TamilNadu";
+    String PM;
+    String CM;
+    String District;
+    int pop;
+
+    public void set_dim(String c, String d, int cpop, String p) {
+        CM = c;
+        District = d; 
+        pop = cpop;
+        PM = p;
+    }
+
+    public void display() {
+        System.out.println("1.PM:" + PM);
+        System.out.println("2.CM:" + CM);
+        System.out.println("3.State:" + state);
+        System.out.println("4.District name:" + District);
+        System.out.println("5.Population:" + pop);
+    }
+}
+
+class AN {
+    static String state = "Andhra Pradesh";
+    String PM;
+    String CM;
+    String District; 
+    int pop;
+
+    public void set_dim(String c, String d, int cpop, String p) {
+        CM = c;
+        District = d;
+        pop = cpop;
+        PM = p;
+    }
+
+    public void display() {
+        System.out.println("1.PM:" + PM);
+        System.out.println("2.CM:" + CM);
+        System.out.println("3.State:" + state);
+        System.out.println("4.District name:" + District);
+        System.out.println("5.Population:" + pop);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        TN a = new TN();
+        AN a1 = new AN();
+        a.set_dim("Vijay", "Chennai", 8091092, common.PM);
+        a1.set_dim("Chandrababu", "Vijayawada", 9876644, common.PM);
+        a.display();
+        a1.display();
+    }
+}
